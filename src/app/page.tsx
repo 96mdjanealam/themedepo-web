@@ -1,8 +1,17 @@
+import HomeHero from "@/components/hearder/HomeHero";
+import Categories from "@/components/home/Categories";
+import OurStory from "@/components/home/OurStory";
+import PopularThemes from "@/components/home/PopularThemes";
+import ThemesGallery from "@/components/home/ThemesGallery";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
-      <div className=" mx-auto bg-red-500 my-10">main</div>
+    <div>
+      <HomeHero/>
+      <OurStory/>
+      <Categories/>
+      <ThemesGallery/>
+      <PopularThemes/>
     </div>
   );
 }

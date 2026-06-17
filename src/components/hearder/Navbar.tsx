@@ -2,7 +2,11 @@
 
 import { NAV_ITEMS } from "@/constants/data";
 import { logo } from "@/constants/images";
-import { DropdownMenuProps, MobileNavItemProps, NavLinkProps } from "@/constants/types";
+import {
+  DropdownMenuProps,
+  MobileNavItemProps,
+  NavLinkProps,
+} from "@/constants/types";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,10 +66,7 @@ const NavLink = ({ item }: NavLinkProps) => {
   }
 
   return (
-    <li
-      ref={ref}
-      className="relative"
-    >
+    <li ref={ref} className="relative">
       <button
         className={`${baseClass} bg-transparent border-none`}
         onClick={() => setIsOpen((prev) => !prev)}
@@ -127,7 +128,7 @@ const MobileNavItem = ({ item, onNavigate }: MobileNavItemProps) => {
               <Link
                 href={child.href}
                 onClick={onNavigate}
-                className="block py-2 text-xs tracking-widest text-custom-gray hover:text-primary transition-colors duration-150"
+                className="block py-2 text-xs tracking-widest text-medium-gray hover:text-primary transition-colors duration-150"
               >
                 {child.label}
               </Link>
@@ -157,7 +158,7 @@ const Navbar = () => {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header className="relative z-40 border-b border-gray-200 shadow-md shadow-gray-100">
+    <header className="sticky top-0 z-40 border-b border-gray-200 shadow-md bg-background">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" aria-label="Go to homepage">

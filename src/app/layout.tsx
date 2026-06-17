@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/hearder/Navbar";
 
@@ -14,9 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+  subsets: ["latin"],
+  variable: "--font-inter-var",
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne-var",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,14 +36,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${geistSans.variable} ${geistMono.variable}  h-full antialiased`}
+      className={`${inter.variable} ${syne.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/>
-        <main>
-        {children}
-        </main>
-        </body>
+        <Navbar />
+        <main className="flex flex-col">{children}</main>
+      </body>
     </html>
   );
 }

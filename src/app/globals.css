@@ -2,22 +2,28 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #09090B;
-  --primary: #E85002;
-  --custom-gray: #3F3F46;   /* kebab-case */
+  --foreground: #09090b;
+  --primary: #e85002;
+  --dark-gray: #1a1a1a;
+  --medium-gray: #3f3f46;
+  --light-gray: #9f9fa9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-custom-gray: var(--custom-gray);  /* kebab-case */
+  --color-dark-gray: var(--dark-gray);
+  --color-medium-gray: var(--medium-gray);
+  --color-light-gray: var(--light-gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter-var);
+  --font-syne: var(--font-syne-var);
 }
 
 body {
   background: var(--background);
-  color: var(--custom-gray);
-  font-family: var(--font-inter);
+  color: var(--medium-gray);
+  font-family: var(--font-inter-var);
 }
