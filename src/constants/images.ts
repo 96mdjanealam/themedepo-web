@@ -10,6 +10,9 @@ import theme_3 from "@/asset/images/theme-3.png";
 import popularTheme_1 from "@/asset/images/popular-theme-1.png";
 import popularTheme_2 from "@/asset/images/popular-theme-2.png";
 import popularTheme_3 from "@/asset/images/popular-theme-3.png";
+import hire_us_bg from "@/asset/images/hire-us-bg.png";
+import technicalExcellence_bg from "@/asset/images/technical-excellence-bg.png";
+import ctoImg from "@/asset/images/cto-img.png";
 
 export {
   logo,
@@ -24,4 +27,7 @@ export {
   popularTheme_1,
   popularTheme_2,
   popularTheme_3,
+  hire_us_bg,
+  technicalExcellence_bg,
+  ctoImg,
 };
