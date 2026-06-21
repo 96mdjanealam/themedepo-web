@@ -103,7 +103,7 @@ const TheTeam = () => (
         <h2 className="font-syne font-bold text-4xl sm:text-5xl text-foreground mb-4">
           Meet the team<span className="text-primary">.</span>
         </h2>
-        <p className="text-sm sm:text-base text-dark-gray leading-relaxed">
+        <p className="text-sm sm:text-base text-medium-gray leading-relaxed">
           We&apos;re a small, distributed team of designers and engineers
           passionate about building tools that help others ship faster.
         </p>
