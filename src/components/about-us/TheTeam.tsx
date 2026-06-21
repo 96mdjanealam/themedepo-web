@@ -51,7 +51,7 @@ const TEAM: TeamMember[] = [
     image: teamEmployee3,
   },
   {
-    name: "Jane Alam",
+    name: "Md Jane Alam",
     role: "Frontend Engineer",
     bio: "Dedicated frontend developer skilled in React, Next.js, and modern web technologies. Passionate about building clean, maintainable, and user-friendly web applications.",
     image: teamEmployee4,
