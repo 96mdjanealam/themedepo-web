@@ -27,6 +27,7 @@ import teamEmployee1 from "@/asset/images/team-employee1.png";
 import teamEmployee2 from "@/asset/images/team-employee2.png";
 import teamEmployee3 from "@/asset/images/team-employee3.png";
 import teamEmployee4 from "@/asset/images/team-employee4.png";
+import servicesPageImg1 from "@/asset/images/service-page-image1.png";
 
 export {
   teamCeoImg,
@@ -58,4 +59,5 @@ export {
   facebook,
   linkedin,
   commonHeroBg,
+  servicesPageImg1,
 };

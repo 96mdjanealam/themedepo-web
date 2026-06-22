@@ -6,7 +6,7 @@ import Faq from "@/components/home/Faq";
 import HireUs from "@/components/home/HireUs";
 import OurStory from "@/components/shared/OurStory";
 import PopularThemes from "@/components/home/PopularThemes";
-import Review from "@/components/home/Review";
+import Review from "@/components/shared/Review";
 import TechnicalExcellence from "@/components/home/TechnicalExcellence";
 import ThemesGallery from "@/components/home/ThemesGallery";
 import WhyChooseOurTheme from "@/components/shared/WhyChooseOurTheme";

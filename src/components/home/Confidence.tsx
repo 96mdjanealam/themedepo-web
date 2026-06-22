@@ -70,7 +70,7 @@ const GuaranteeCard = ({ item }: { item: GuaranteeItem }) => (
       <h3 className="font-syne font-semibold text-base text-foreground mb-2">
         {item.label}
       </h3>
-      <p className="text-sm text-custom-gray leading-relaxed">
+      <p className="text-sm text-medium-gray leading-relaxed">
         {item.description}
       </p>
     </div>

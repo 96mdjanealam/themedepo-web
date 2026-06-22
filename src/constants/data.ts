@@ -85,15 +85,6 @@ export const THEMES: Theme[] = [
 export const popularThemes: IPopularTheme[] = [
   {
     id: 1,
-    name: "Solarsux",
-    category: "Solar Energy",
-    rating: 4.8,
-    totalSales: "850+",
-    image: popularTheme_1,
-    href: "/themes/solarsux",
-  },
-  {
-    id: 2,
     name: "Arclight",
     category: "Architecture",
     rating: 4.9,
@@ -102,12 +93,21 @@ export const popularThemes: IPopularTheme[] = [
     href: "/themes/arclight",
   },
   {
-    id: 3,
+    id: 2,
     name: "Telenira",
     category: "Online Telemedicine",
     rating: 5.0,
     totalSales: "2,400+",
     image: popularTheme_3,
     href: "/themes/telenira",
+  },
+  {
+    id: 3,
+    name: "Solarsux",
+    category: "Solar Energy",
+    rating: 4.8,
+    totalSales: "850+",
+    image: popularTheme_1,
+    href: "/themes/solarsux",
   },
 ];

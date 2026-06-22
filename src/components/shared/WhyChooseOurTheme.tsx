@@ -75,7 +75,7 @@ const WhyChooseOurTheme = () => (
         <div className="lg:w-2/5 lg:pr-16 flex flex-col justify-center">
           <div className="inline-flex items-center gap-2 px-3 py-2 border border-gray-200 w-fit mb-8">
             <span className="w-2 h-2 shrink-0 bg-primary" aria-hidden="true" />
-            <span className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-custom-gray">
+            <span className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-medium-gray">
               Why Us
             </span>
           </div>
@@ -97,7 +97,7 @@ const WhyChooseOurTheme = () => (
             {STATS.map(({ value, label }) => (
               <div key={label}>
                 <p className="font-syne font-semibold text-4xl text-foreground">{value}</p>
-                <p className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-custom-gray mt-1">
+                <p className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-medium-gray mt-1">
                   {label}
                 </p>
               </div>

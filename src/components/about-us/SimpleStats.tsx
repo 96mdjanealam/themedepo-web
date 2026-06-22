@@ -37,7 +37,7 @@ const StatCard = ({ stat }: { stat: Stat }) => {
       <stat.Icon
         size={28}
         strokeWidth={1.5}
-        className={`mb-6 ${stat.featured ? "text-white/80" : "text-custom-gray"}`}
+        className={`mb-6 ${stat.featured ? "text-white/80" : "text-medium-gray"}`}
       />
       <p
         className={`font-syne font-bold text-4xl sm:text-5xl mb-3 transition-all duration-300 group-hover:scale-110 ${
@@ -50,7 +50,7 @@ const StatCard = ({ stat }: { stat: Stat }) => {
       </p>
       <p
         className={`text-[0.65rem] font-bold tracking-[0.15em] uppercase ${
-          stat.featured ? "text-white/70" : "text-custom-gray"
+          stat.featured ? "text-white/70" : "text-medium-gray"
         }`}
       >
         {stat.label}

@@ -57,7 +57,7 @@ const ThemeCard = ({ theme }: { theme: IPopularTheme }) => (
       {/* Sales + CTA */}
       <div className="flex items-end justify-between">
         <div>
-          <p className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-custom-gray mb-1">
+          <p className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-medium-gray mb-1">
             Total Sales
           </p>
           <p className="font-semibold text-lg text-foreground">
@@ -91,7 +91,7 @@ const PopularThemes = () => {
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 mb-4">
             <Star size={14} className="text-primary" strokeWidth={1.5} />
-            <span className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-custom-gray">
+            <span className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-medium-gray">
               Trending Now
             </span>
           </div>

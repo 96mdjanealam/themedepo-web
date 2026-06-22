@@ -134,7 +134,7 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
             {review.name}
           </p>
           <p
-            className={`text-[0.6rem] tracking-wide uppercase mt-0.5 ${isPrimary ? "text-white/60" : "text-custom-gray"}`}
+            className={`text-[0.6rem] tracking-wide uppercase mt-0.5 ${isPrimary ? "text-white/60" : "text-medium-gray"}`}
           >
             {review.role}
           </p>
@@ -193,7 +193,7 @@ const Review = () => (
             <span className="text-primary">Our Respected User</span>
           </h2>
         </div>
-        <p className="text-sm text-custom-gray leading-relaxed max-w-xs lg:text-right">
+        <p className="text-sm text-medium-gray leading-relaxed max-w-xs lg:text-right">
           Join thousands of developers and designers building production-grade
           applications.
         </p>

@@ -6,7 +6,6 @@ import { useState } from "react";
 // ---------------------------------------------------------------------------
 // Types & data
 // ---------------------------------------------------------------------------
-
 interface FaqItem {
   id: number;
   question: string;
@@ -42,9 +41,8 @@ const FAQ_ITEMS: FaqItem[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Accordion item
+// Sub-component: AccordionItem
 // ---------------------------------------------------------------------------
-
 const AccordionItem = ({ item, isOpen, onToggle }: {
   item: FaqItem;
   isOpen: boolean;
@@ -53,65 +51,71 @@ const AccordionItem = ({ item, isOpen, onToggle }: {
   <div className="border-b border-gray-200">
     <button
       onClick={onToggle}
-      className="w-full flex items-center justify-between gap-6 py-6 text-left"
+      className="flex w-full items-center justify-between gap-6 py-6 text-left"
       aria-expanded={isOpen}
     >
-      <span className={`font-syne font-semibold text-base sm:text-lg transition-colors duration-200 ${isOpen ? "text-primary" : "text-foreground"}`}>
+      <span className={`font-syne text-base font-semibold transition-colors duration-200 sm:text-lg ${
+        isOpen ? "text-primary" : "text-foreground"
+      }`}>
         {item.question}
       </span>
-      <div className={`w-8 h-8 rounded-full shrink-0 flex items-center justify-center transition-colors duration-200 ${isOpen ? "bg-primary text-white" : "border border-gray-300 text-medium-gray"}`}>
+      {/* Icon frame changes to square matching structural tokens */}
+      <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xs transition-colors duration-200 ${
+        isOpen ? "bg-primary text-white" : "border border-gray-300 text-medium-gray"
+      }`}>
         {isOpen ? <Minus size={14} /> : <Plus size={14} />}
       </div>
     </button>
 
-    {/* Answer — animated expand */}
-    <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-48 pb-6" : "max-h-0"}`}>
-      <p className="text-sm text-medium-gray leading-relaxed">
-        {item.answer}
-      </p>
+    {/* Modern Dynamic Grid Expansion Layout */}
+    <div className={`grid transition-all duration-300 ease-in-out ${
+      isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
+    }`}>
+      <div className="overflow-hidden">
+        <p className="text-medium-gray text-sm leading-relaxed">
+          {item.answer}
+        </p>
+      </div>
     </div>
   </div>
 );
 
 // ---------------------------------------------------------------------------
-// Section
+// Component: Faq
 // ---------------------------------------------------------------------------
-
 const Faq = () => {
   const [openId, setOpenId] = useState<number | null>(FAQ_ITEMS[0].id);
 
-  const toggle = (id: number) => setOpenId((prev) => (prev === id ? null : id));
-
   return (
-    <section className="py-20 lg:py-32 px-4 bg-background">
+    <section className="bg-background px-4 py-20 lg:py-32">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
 
-          {/* Left — header */}
-          <div className="lg:w-2/5 shrink-0">
-            <div className="inline-flex items-center gap-2 px-3 py-2 border border-primary bg-primary/10 mb-8">
-              <span className="w-2 h-2 shrink-0 bg-primary" aria-hidden="true" />
-              <span className="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-primary">
+          {/* Left Side Layout — Spans 5 Columns */}
+          <div className="lg:col-span-5">
+            <div className="mb-8 inline-flex items-center gap-2 border border-primary bg-primary/10 px-3 py-2 w-fit">
+              <span className="h-2 w-2 shrink-0 bg-primary" aria-hidden="true" />
+              <span className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-primary">
                 Help Center
               </span>
             </div>
-            <h2 className="font-syne font-bold text-4xl sm:text-5xl text-foreground leading-tight mb-6">
+            <h2 className="font-syne text-foreground mb-6 text-4xl font-bold leading-tight sm:text-5xl">
               Frequently<br />asked questions.
             </h2>
-            <p className="text-sm text-medium-gray leading-relaxed max-w-xs">
+            <p className="text-medium-gray text-sm leading-relaxed max-w-sm">
               Everything you need to know about the product and billing. Looking
               for something else? Reach out to our team via chat.
             </p>
           </div>
 
-          {/* Right — accordion */}
-          <div className="flex-1 border-t border-gray-200">
+          {/* Right Side Layout — Spans 7 Columns */}
+          <div className="border-t border-gray-200 lg:col-span-7">
             {FAQ_ITEMS.map((item) => (
               <AccordionItem
                 key={item.id}
                 item={item}
                 isOpen={openId === item.id}
-                onToggle={() => toggle(item.id)}
+                onToggle={() => setOpenId(openId === item.id ? null : item.id)}
               />
             ))}
           </div>
