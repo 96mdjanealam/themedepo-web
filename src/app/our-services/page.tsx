@@ -1,4 +1,6 @@
 import EverythingNeedToKnow from '@/components/our-services/EverythingNeedToKnow'
+import OurWorkProcess from '@/components/our-services/OurWorkProcess';
+import TechStack from '@/components/our-services/TechStack';
 import { Metadata } from 'next';
 import React from 'react'
 
@@ -11,6 +13,8 @@ const OurServicesPage = () => {
   return (
     <div>
       <EverythingNeedToKnow/>
+      <OurWorkProcess/>
+      <TechStack/>
     </div>
   )
 }

@@ -28,6 +28,20 @@ import teamEmployee2 from "@/asset/images/team-employee2.png";
 import teamEmployee3 from "@/asset/images/team-employee3.png";
 import teamEmployee4 from "@/asset/images/team-employee4.png";
 import servicesPageImg1 from "@/asset/images/service-page-image1.png";
+import figma from "@/asset/images/stackIcons/figma-96.png";
+import laravel from "@/asset/images/stackIcons/laravel-96.png";
+import mySql from "@/asset/images/stackIcons/my-sql-96.png";
+import nextjs from "@/asset/images/stackIcons/nextjs-96.png";
+import nodejs from "@/asset/images/stackIcons/nodejs-96.png";
+import prismaOrm from "@/asset/images/stackIcons/prisma-orm-96.png";
+import postGreSQL from "@/asset/images/stackIcons/postgresql-96.png";
+import tailwind from "@/asset/images/stackIcons/tailwind-css-96.png";
+import react from "@/asset/images/stackIcons/react-96.png";
+import typescript from "@/asset/images/stackIcons/typescript-96.png";
+import php from "@/asset/images/stackIcons/php-96.png";
+import arclightBnr from "@/asset/images/bannerImgs/archlightBanner.png"
+import arclightHtmlBnr from "@/asset/images/bannerImgs/archlightHtmlBanner.png"
+import solarsuxBnr from "@/asset/images/bannerImgs/solarsuxBanner.png"
 
 export {
   teamCeoImg,
@@ -61,3 +75,23 @@ export {
   commonHeroBg,
   servicesPageImg1,
 };
+
+export const stackImages = {
+  figma,
+  laravel,
+  mySql,
+  nextjs,
+  nodejs,
+  prismaOrm,
+  postGreSQL,
+  tailwind,
+  react,
+  typescript,
+  php,
+};
+
+export const themeBnrs= {
+  arclightBnr,
+  arclightHtmlBnr,
+  solarsuxBnr
+}

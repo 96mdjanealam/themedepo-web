@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
 
 // Navbar types ===============================================================
@@ -30,6 +31,12 @@ export interface MobileNavItemProps {
 
 export type themeFilterKey = "all" | "corporate" | "ecommerce" | "technology";
 
+interface themeKeyFeature {
+  title: string;
+  desc: string;
+  Icon: LucideIcon;
+}
+
 export interface Theme {
   id: number;
   name: string;
@@ -37,8 +44,14 @@ export interface Theme {
   filter: themeFilterKey;
   price: string;
   image: StaticImageData;
+  bannerImg: StaticImageData;
   badge?: "FEATURED" | "TRENDING";
   href: string;
+  purchaseLink: string;
+  previewLink: string;
+  overview: string;
+  techStack: string[];
+  keyFeatures: themeKeyFeature[];
 }
 
 export interface IPopularTheme {
