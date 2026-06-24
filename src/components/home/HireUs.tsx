@@ -41,7 +41,7 @@ const HireUs = () => (
 
           {/* CTA */}
           <Link
-            href="/hire-us"
+            href="/contact-us"
             className="shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-white hover:bg-primary text-foreground hover:text-white text-xs font-bold tracking-[0.18em] uppercase transition-colors duration-200"
           >
             Hire Us Now

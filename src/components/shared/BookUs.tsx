@@ -1,5 +1,5 @@
 import { ctoImg } from "@/constants/images";
-import { ArrowRight, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays, Headset } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,13 +38,13 @@ const BookUs = () => (
 
           {/* CTA */}
           <Link
-            href="#"
+            href="/contact-us"
             // target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-7 py-4 bg-primary hover:bg-primary/90 text-white text-xs font-bold tracking-[0.18em] uppercase transition-colors duration-200"
           >
-            <CalendarDays size={14} />
-            Book Us Now
+            <Headset size={14}/>
+            Contact Us Now
             <ArrowRight size={14} />
           </Link>
         </div>

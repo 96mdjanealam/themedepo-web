@@ -53,7 +53,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Hire Us", href: "/hire-us", badge: "AVAILABLE" },
+      { label: "Hire Us", href: "/contact-us", badge: "AVAILABLE" },
       { label: "Contact Support", href: "/support" },
       { label: "Partners Program", href: "/partners" },
     ],

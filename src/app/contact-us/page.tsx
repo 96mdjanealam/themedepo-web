@@ -1,4 +1,6 @@
+import ContactInfo from '@/components/contact-us/ContactInfo';
 import ContactUsHero from '@/components/contact-us/ContactUsHero';
+import Faq from '@/components/home/Faq';
 
 import { Metadata } from 'next';
 import React from 'react'
@@ -14,6 +16,8 @@ const ContactPage = () => {
   return (
     <div>
       <ContactUsHero/>
+      <ContactInfo/>
+      <Faq/>
     </div>
   )
 }

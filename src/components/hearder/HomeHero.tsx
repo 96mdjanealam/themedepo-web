@@ -1,6 +1,7 @@
 import { homeHeroBg, heroThemes } from "@/constants/images";
 import { ArrowRight, Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -49,7 +50,7 @@ const HomeHero = () => {
       <div className="relative z-10 flex flex-col items-center text-center px-4 pt-20 pb-0">
         {/* Announcement badge */}
         <a
-          href="/architecture-2"
+          href="/themes"
           className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors duration-200"
         >
           <span
@@ -79,21 +80,26 @@ const HomeHero = () => {
         </p>
 
         {/* Search bar */}
-        <div className="w-full max-w-xl mb-6">
+        <div className=" mb-8">
           <div className="flex items-center bg-white rounded-none overflow-hidden shadow-lg">
-            <Search size={18} className="ml-5 text-light-gray shrink-0" />
+            {/* <Search size={18} className="ml-5 text-light-gray shrink-0" />
             <input
               type="text"
               placeholder="Search Theme & plugins..."
               className="flex-1 px-4 py-4 text-sm text-gray-700 placeholder:text-light-gray outline-none bg-transparent"
               aria-label="Search themes and plugins"
-            />
-            <button
-              className="flex items-center justify-center w-14 h-full min-h-13 bg-primary hover:bg-primary/90 transition-colors duration-200 shrink-0"
-              aria-label="Submit search"
+            /> */}
+            <Link
+              href="/themes"
+              className="group inline-flex px-8 py-4 items-center justify-center gap-2 bg-primary  font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+              aria-label="Explore themes"
             >
-              <ArrowRight size={18} className="text-white" />
-            </button>
+              <span>Explore Themes</span>
+              <ArrowRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
           </div>
         </div>
 

@@ -43,19 +43,24 @@ export const NAV_ITEMS: NavItem[] = [
     label: "PAGES",
     children: [
       { label: "About Us", href: "/about-us" },
-      { label: "Our Team", href: "/team" },
-      { label: "Testimonials", href: "/testimonials" },
-      { label: "FAQ", href: "/faq" },
+      { label: "Our Services", href: "/our-services" },
+      // { label: "Our Team", href: "/team" },
+      { label: "Hire Us", href: "/hire-us" },
+      // { label: "FAQ", href: "/faq" },
     ],
   },
-  {
-    label: "SUPPORT",
-    children: [
-      { label: "Contact", href: "/contact" },
-      { label: "Documentation", href: "/docs" },
-      { label: "Warranty", href: "/warranty" },
-    ],
+   {
+    label: "CONTACT",
+    href: "/contact-us",
   },
+  // {
+  //   label: "SUPPORT",
+  //   children: [
+  //     { label: "Contact", href: "/contact" },
+  //     { label: "Documentation", href: "/docs" },
+  //     { label: "Warranty", href: "/warranty" },
+  //   ],
+  // },
 ];
 
 // Themes ==========================================================
