@@ -184,7 +184,7 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <Link
-          href="/hire-us"
+          href="/contact-us"
           className="hidden lg:inline-flex items-center px-8 py-3 bg-foreground hover:bg-primary text-white text-sm tracking-[0.2rem] font-bold transition-colors duration-200"
         >
           HIRE US
@@ -226,7 +226,7 @@ const Navbar = () => {
             ))}
           </ul>
           <Link
-            href="/hire-us"
+            href="/contact-us"
             onClick={closeMobile}
             className="mt-6 flex items-center justify-center px-8 py-3 bg-foreground hover:bg-primary text-white text-sm tracking-[0.2rem] font-bold transition-colors duration-200"
           >

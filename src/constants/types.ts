@@ -52,6 +52,7 @@ export interface Theme {
   overview: string;
   techStack: string[];
   keyFeatures: themeKeyFeature[];
+  rating?: number;
 }
 
 export interface IPopularTheme {

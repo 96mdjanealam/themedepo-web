@@ -3,7 +3,7 @@
 import { themeFilters, THEMES } from "@/constants/data";
 
 import { themeFilterKey, Theme } from "@/constants/types";
-import { ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -13,24 +13,9 @@ import { useState } from "react";
 // ---------------------------------------------------------------------------
 
 const ThemeCard = ({ theme }: { theme: Theme }) => (
-  <div className="flex flex-col border border-gray-200 group hover:bg-primary/5 transition-colors">
-    {/* Card header */}
-    <div className="flex items-start justify-between px-5 pt-5 pb-4">
-      <div>
-        <h3 className="font-syne font-semibold text-xl text-foreground">
-          {theme.name}
-        </h3>
-        <p className="text-sm text-medium-gray mt-0.5">{theme.category}</p>
-      </div>
-      {theme.badge && (
-        <span className="text-[0.6rem] font-bold tracking-[0.15em] px-2.5 py-1 bg-primary text-white">
-          {theme.badge}
-        </span>
-      )}
-    </div>
-
-    {/* Theme image */}
-    <div className="relative overflow-hidden mx-4 flex-1 min-h-56 group-hover:shadow-lg transition-shadow">
+  <div className="flex flex-col border border-gray-200 group bg-white">
+    {/* Full-bleed image */}
+    <div className="relative overflow-hidden w-full aspect-4/3">
       <Image
         src={theme.image}
         alt={`${theme.name} theme preview`}
@@ -40,24 +25,73 @@ const ThemeCard = ({ theme }: { theme: Theme }) => (
       />
     </div>
 
-    {/* Card footer */}
-    <div className="flex items-center justify-between px-5 py-4 mt-2">
-      <span className="font-bold text-xl text-foreground">{theme.price}</span>
-      <Link
-        href={theme.href}
-        className={`w-9 h-9 flex items-center justify-center transition-colors duration-200 ${
-          theme.badge === "FEATURED"
-            ? "bg-primary text-white hover:bg-primary/90"
-            : "border border-gray-200 text-foreground hover:border-primary hover:text-primary"
-        }`}
-        aria-label={`View ${theme.name}`}
-      >
-        {theme.badge === "FEATURED" ? (
-          <ArrowUpRight size={16} />
-        ) : (
-          <ArrowRight size={16} />
+    {/* Body */}
+    <div className="flex flex-col p-5 gap-4">
+      {/* Category + name + rating */}
+      <div>
+        <p className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-primary mb-1">
+          {theme.category}
+        </p>
+        <div className="flex items-center justify-between">
+          <h3 className="font-syne font-bold text-xl text-foreground tracking-wide">
+            {theme.name.toUpperCase()}
+          </h3>
+          {theme.rating && (
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-50 border border-gray-100 rounded-sm">
+              <Star size={12} className="text-foreground fill-foreground" />
+              <span className="text-xs font-bold text-foreground">
+                {theme.rating}
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* CTA buttons */}
+      <div className="flex gap-3">
+        {theme.previewLink && (
+          <Link
+            href={theme.previewLink ?? theme.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center gap-2 py-3 border border-gray-200 text-xs font-bold tracking-widest uppercase text-foreground hover:border-primary hover:text-primary transition-colors duration-200"
+          >
+            <ExternalLink size={13} />
+            Live Preview
+          </Link>
         )}
-      </Link>
+        <Link
+          href={theme.purchaseLink ?? theme.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 inline-flex items-center justify-center gap-2 py-3 border border-gray-200 text-xs font-bold tracking-widest uppercase text-foreground hover:border-primary hover:text-primary transition-colors duration-200"
+        >
+          <ShoppingCart size={13} />
+          Purchase
+        </Link>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-gray-100" />
+
+      {/* Price + View Info */}
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-[0.55rem] font-bold tracking-[0.15em] uppercase text-medium-gray mb-0.5">
+            Price
+          </p>
+          <p className="font-syne font-bold text-xl text-foreground">
+            {theme.price}
+          </p>
+        </div>
+        <Link
+          href={theme.href}
+          className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.12em] uppercase text-foreground hover:text-primary transition-colors duration-200"
+        >
+          View Info
+          <ArrowRight size={13} />
+        </Link>
+      </div>
     </div>
   </div>
 );
@@ -117,8 +151,14 @@ const ThemesGalleryExt = () => {
         {/* Divider */}
         <div className="border-t border-gray-200 mb-10" />
 
+        {filtered.length < 1 && (
+          <div className="py-10 text-center">
+            <span>OOPS! No Items Found.</span>
+          </div>
+        )}
+
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((theme) => (
             <ThemeCard key={theme.id} theme={theme} />
           ))}
@@ -127,10 +167,12 @@ const ThemesGalleryExt = () => {
         {/* CTA */}
         <div className="flex justify-center mt-14">
           <Link
-            href="/themes"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://themeforest.net/user/themedepo1/portfolio"
             className="inline-flex items-center gap-3 px-10 py-4 bg-foreground hover:bg-primary text-white text-xs font-bold tracking-[0.18em] uppercase transition-colors duration-200"
           >
-            View All Stores
+            Explore us at Marketplace
             <ExternalLink size={14} />
           </Link>
         </div>
