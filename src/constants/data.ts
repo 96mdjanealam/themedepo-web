@@ -13,7 +13,6 @@ import {
 import { themeFilterKey, NavItem, Theme, IPopularTheme } from "./types";
 import {
   theme_1,
-  theme_2,
   theme_3,
   popularTheme_1,
   popularTheme_2,
