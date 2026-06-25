@@ -82,7 +82,7 @@ export const THEMES: Theme[] = [
     bannerImg: themeBnrs.arclightBnr,
     badge: "FEATURED",
     rating: 5.0,
-    href: "/themes/arclight",
+    href: "/themes/1",
     purchaseLink:
       "https://themeforest.net/item/arclight-architecture-interior-design-figma-template/61508053",
     previewLink:
@@ -127,7 +127,7 @@ export const THEMES: Theme[] = [
     image: theme_1,
     bannerImg: themeBnrs.arclightHtmlBnr,
     rating: 5.0,
-    href: "/themes/arclightHtml",
+    href: "/themes/2",
     purchaseLink:
       "https://themeforest.net/item/arclight-architecture-interior-design-html-template/62461839",
     previewLink: "https://arclight-preview.themedepo.com",
@@ -179,7 +179,7 @@ export const THEMES: Theme[] = [
     bannerImg: themeBnrs.solarsuxBnr,
     badge: "TRENDING",
     rating: 5.0,
-    href: "/themes/solarsux",
+    href: "/themes/3",
     purchaseLink:
       "https://themeforest.net/item/solarsux-solar-energy-company-figma-template/62617018",
     previewLink:

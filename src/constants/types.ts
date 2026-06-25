@@ -20,6 +20,7 @@ export interface NavItem {
 export interface DropdownMenuProps {
   items: SubMenuItem[];
   isOpen: boolean;
+  toggleIsOpen: () => void;
 }
 
 export interface MobileNavItemProps {

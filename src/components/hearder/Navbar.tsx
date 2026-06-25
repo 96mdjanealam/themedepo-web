@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const DropdownMenu = ({ items, isOpen }: DropdownMenuProps) => (
+const DropdownMenu = ({ items, isOpen, toggleIsOpen }: DropdownMenuProps) => (
   <div
     className={`
       absolute top-full left-1/2 -translate-x-1/2 mt-4 w-48
@@ -26,6 +26,7 @@ const DropdownMenu = ({ items, isOpen }: DropdownMenuProps) => (
         <li key={item.href}>
           <Link
             href={item.href}
+            onClick={() => toggleIsOpen()}
             className="block px-4 py-2.5 tracking-widest hover:text-primary hover:bg-gray-50 transition-colors duration-150"
           >
             {item.label}
@@ -79,7 +80,11 @@ const NavLink = ({ item }: NavLinkProps) => {
           className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
-      <DropdownMenu items={item.children!} isOpen={isOpen} />
+      <DropdownMenu
+        items={item.children!}
+        isOpen={isOpen}
+        toggleIsOpen={()=>setIsOpen(prev => !prev)}
+      />
     </li>
   );
 };

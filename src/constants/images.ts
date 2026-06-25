@@ -42,8 +42,10 @@ import php from "@/asset/images/stackIcons/php-96.png";
 import arclightBnr from "@/asset/images/bannerImgs/archlightBanner.png"
 import arclightHtmlBnr from "@/asset/images/bannerImgs/archlightHtmlBanner.png"
 import solarsuxBnr from "@/asset/images/bannerImgs/solarsuxBanner.png"
+import xLogo from "@/asset/images/x-logo.png"
 
 export {
+  xLogo,
   teamCeoImg,
   teamCtoImg,
   teamEmployee1,

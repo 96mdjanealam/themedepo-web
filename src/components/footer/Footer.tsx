@@ -9,6 +9,7 @@ import {
   facebook,
   linkedin,
   twitter,
+  xLogo,
 } from "@/constants/images";
 import { Star } from "lucide-react";
 import Image from "next/image";
@@ -32,50 +33,49 @@ interface FooterColumn {
 
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
-    title: "Products",
+    title: "Pages",
     links: [
       { label: "Premium Themes", href: "/themes", badge: "NEW" },
-      { label: "Website Templates", href: "/templates" },
-      { label: "UI Kits", href: "/ui-kits" },
-      { label: "Figma Assets", href: "/figma-assets" },
+      { label: "Home", href: "/" },
+      { label: "Our Services", href: "/our-services" },
+      { label: "Portfolio", href: "/portfolio" },
     ],
   },
   {
-    title: "Resources",
+    title: "Links",
     links: [
-      { label: "Documentation", href: "/docs" },
-      { label: "Component Library", href: "/components" },
-      { label: "Blog & Tutorials", href: "/blog" },
-      { label: "Changelog", href: "/changelog" },
+      { label: "Marketplace", href: "https://themeforest.net/user/themedepo1/portfolio" },
+      { label: "Storement", href: "https://storement.com" },
+      { label: "EleganceIT", href: "https://eleganceit.co" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "/about" },
-      { label: "Hire Us", href: "/contact-us", badge: "AVAILABLE" },
-      { label: "Contact Support", href: "/support" },
-      { label: "Partners Program", href: "/partners" },
+      { label: "About Us", href: "/about-us" },
+      { label: "Hire Us", href: "/hire-us", badge: "AVAILABLE" },
+      { label: "Contact Support", href: "/contact-us" },
+      // { label: "Partners Program", href: "/partners" },
     ],
   },
 ];
 
 const SOCIALS = [
   {
-    label: "Twitter",
-    href: "https://twitter.com",
-    Icon: twitter,
-    alt: "twitter",
+    label: "X",
+    href: "https://x.com/eleganceIT009",
+    Icon: xLogo,
+    alt: "X",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/eleganceitsolution",
     Icon: facebook,
     alt: "facebook",
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/eleganceitsolution",
     Icon: linkedin,
     alt: "linkedin",
   },
@@ -280,7 +280,7 @@ const Footer = () => {
       <div className="relative z-10 border-t border-white/10">
         <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[0.65rem] tracking-widest uppercase text-white/40">
-            © 2026 Exclusive Author. All rights reserved.
+            © 2026 THEMEDEPO. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {LEGAL_LINKS.map((link) => (
