@@ -1,4 +1,5 @@
 import EverythingNeedToKnow from '@/components/our-services/EverythingNeedToKnow'
+import OurServicesHero from '@/components/our-services/OurServicesHero';
 import OurWorkProcess from '@/components/our-services/OurWorkProcess';
 import TechStack from '@/components/our-services/TechStack';
 import { Metadata } from 'next';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 const OurServicesPage = () => {
   return (
     <div>
+      <OurServicesHero/>
       <EverythingNeedToKnow/>
       <OurWorkProcess/>
       <TechStack/>

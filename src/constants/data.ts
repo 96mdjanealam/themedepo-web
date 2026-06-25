@@ -42,8 +42,9 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "PAGES",
     children: [
-      { label: "About Us", href: "/about-us" },
+      { label: "Portfolio", href: "/portfolio" },
       { label: "Our Services", href: "/our-services" },
+      { label: "About Us", href: "/about-us" },
       // { label: "Our Team", href: "/team" },
       { label: "Hire Us", href: "/hire-us" },
       // { label: "FAQ", href: "/faq" },

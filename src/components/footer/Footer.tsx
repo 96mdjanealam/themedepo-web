@@ -8,7 +8,6 @@ import {
   person3,
   facebook,
   linkedin,
-  twitter,
   xLogo,
 } from "@/constants/images";
 import { Star } from "lucide-react";
