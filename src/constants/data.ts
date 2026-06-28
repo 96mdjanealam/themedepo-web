@@ -1,14 +1,16 @@
 import {
-  Code2,
-  Gauge,
-  Globe,
-  HeartHandshake,
-  LayoutTemplate,
+  Briefcase,
+  Building2,
+  Component,
+  FileText,
+  Images,
+  Newspaper,
   Palette,
-  Search,
-  ShieldCheck,
+  Settings,
   Smartphone,
-  Zap,
+  Sparkles,
+  Sun,
+  Workflow,
 } from "lucide-react";
 import { themeFilterKey, NavItem, Theme, IPopularTheme } from "./types";
 import {
@@ -50,7 +52,7 @@ export const NAV_ITEMS: NavItem[] = [
       // { label: "FAQ", href: "/faq" },
     ],
   },
-   {
+  {
     label: "CONTACT",
     href: "/contact-us",
   },
@@ -86,36 +88,35 @@ export const THEMES: Theme[] = [
     href: "/themes/1",
     purchaseLink:
       "https://themeforest.net/item/arclight-architecture-interior-design-figma-template/61508053",
-    previewLink:
-      "",
+    previewLink: "",
     overview:
-      "ARCLIGHT is a modern, elegant, and professionally crafted Figma template designed for interior design studios, architecture firms, construction companies, and creative agencies. Whether you are building a website for an architecture firm, interior design studio, or creative professional, ARCLIGHT delivers a contemporary, minimal, and visually engaging experience.",
+      "ARCLIGHT is a modern and sophisticated Figma template created for architecture firms, interior design studios, construction companies, and creative professionals. Combining clean aesthetics with thoughtful layouts, it provides everything needed to present projects, services, and brand identity in a compelling way. Designed with usability and visual impact in mind, ARCLIGHT offers a polished foundation for creating professional architecture and interior design websites while remaining easy to customize and adapt to different business needs.",
     techStack: ["Figma"],
     keyFeatures: [
       {
-        title: "Modern UI",
-        desc: "A sleek and minimal design crafted specifically for architecture, interior design, and creative portfolio websites.",
+        title: "Modern Design System",
+        desc: "Elegant and professionally crafted interfaces tailored for architecture and interior design brands.",
         Icon: Palette,
       },
       {
         title: "Responsive Layouts",
-        desc: "Dedicated desktop and mobile layouts ensure a seamless browsing experience across all devices.",
+        desc: "Designed with desktop and mobile experiences in mind to ensure consistency across screen sizes.",
         Icon: Smartphone,
       },
       {
         title: "Reusable Components",
-        desc: "Well-structured layers and design elements that make editing, customization, and maintenance effortless.",
-        Icon: Code2,
+        desc: "Organized components and design elements make customization faster and more efficient.",
+        Icon: Component,
       },
       {
-        title: "Portfolio Focused",
-        desc: "A visual-first approach that highlights projects with elegant layouts and impactful presentation.",
-        Icon: Search,
+        title: "Portfolio Showcase",
+        desc: "Dedicated project and gallery sections help present architectural work in a visually engaging manner.",
+        Icon: Images,
       },
       {
-        title: "Scalable Structure",
-        desc: "Flexible architecture designed to accommodate expanding portfolios and growing project collections.",
-        Icon: Zap,
+        title: "Prototype Ready",
+        desc: "Structured for interactive prototyping, allowing smooth presentation and user-flow demonstrations.",
+        Icon: Workflow,
       },
     ],
   },
@@ -133,9 +134,9 @@ export const THEMES: Theme[] = [
       "https://themeforest.net/item/arclight-architecture-interior-design-html-template/62461839",
     previewLink: "https://arclight-preview.themedepo.com",
     overview:
-      "Arclight – Modern Architecture Design HTML Template is a sleek, contemporary, and professionally designed template created for architecture firms, interior design studios, construction companies, and creative professionals who want a strong and elegant online presence.",
+      "Arclight is a modern and visually striking HTML template crafted for architecture firms, interior design studios, construction companies, and creative agencies. Featuring elegant layouts, smooth interactions, and a refined design aesthetic, it helps businesses showcase their projects, services, and expertise with confidence. Built with clean code and responsive design principles, Arclight delivers a seamless experience across all devices while maintaining the professional look expected from premium architecture and design brands.",
     techStack: [
-      "HTML",
+      "HTML5",
       "CSS3",
       "JavaScript (ES6)",
       "Anime.js",
@@ -144,29 +145,29 @@ export const THEMES: Theme[] = [
     ],
     keyFeatures: [
       {
-        title: "Crossbrowser compatibility",
-        desc: "Arclight is fully compatible with all major browsers, including IE9+, Chrome, Firefox, and Safari, ensuring a smooth and consistent experience for all users.",
-        Icon: Gauge,
+        title: "Modern Architecture Design",
+        desc: "Professionally crafted layouts tailored for architecture, interior design, and construction businesses.",
+        Icon: Building2,
       },
       {
-        title: "Touch Friendly",
-        desc: "Smooth and effortless browsing on touch-enabled devices for a better user experience.",
-        Icon: ShieldCheck,
-      },
-      {
-        title: "Lifetime Updates and User Support",
-        desc: "Each purchase of the template includes lifetime access to all future updates at no additional cost. You will also receive six months of user support, with the option to extend the support period if needed.",
-        Icon: Globe,
-      },
-      {
-        title: "Mobile First",
-        desc: "Designed for the mobile shopper — fast load times, thumb-friendly navigation, and optimized checkout.",
+        title: "Fully Responsive",
+        desc: "Optimized for desktops, tablets, and mobile devices to provide a seamless viewing experience.",
         Icon: Smartphone,
       },
       {
-        title: "Anime.js Animation",
-        desc: "Anime.js is a high-performance JavaScript animation library widely used for creating smooth and dynamic animations across modern web applications.",
-        Icon: HeartHandshake,
+        title: "Smooth Animations",
+        desc: "Powered by Anime.js to create engaging transitions and interactive visual experiences.",
+        Icon: Sparkles,
+      },
+      {
+        title: "Project Showcase",
+        desc: "Beautiful portfolio and gallery sections designed to highlight projects and case studies effectively.",
+        Icon: Images,
+      },
+      {
+        title: "Easy Customization",
+        desc: "Well-structured code and reusable components make editing, branding, and maintenance simple.",
+        Icon: Settings,
       },
     ],
   },
@@ -183,36 +184,37 @@ export const THEMES: Theme[] = [
     href: "/themes/3",
     purchaseLink:
       "https://themeforest.net/item/solarsux-solar-energy-company-figma-template/62617018",
-    previewLink:
-      "",
+    previewLink: "",
     overview:
-      "SOLARSUX is a modern, clean, and professionally crafted Figma template designed for solar energy companies, renewable energy businesses, green technology startups, and eco-friendly service providers.",
+      "SOLARSUX is a modern and professionally designed Figma template created specifically for solar energy companies, renewable energy providers, and eco-friendly technology businesses. The template combines clean aesthetics with a well-structured layout to help organizations showcase their services, projects, and sustainability initiatives effectively. With thoughtfully designed pages and reusable components, SOLARSUX provides a solid foundation for building a trustworthy and engaging online presence.",
+
     techStack: ["Figma"],
+
     keyFeatures: [
       {
-        title: "Energy UI",
-        desc: "Clean, modern interface tailored for solar and energy businesses.",
-        Icon: LayoutTemplate,
+        title: "Modern Energy Design",
+        desc: "Clean and visually appealing layouts crafted for solar, renewable energy, and sustainability-focused businesses.",
+        Icon: Sun,
       },
       {
-        title: "Quote & Contact",
-        desc: "Dedicated sections for inquiries, quotes, and communication.",
-        Icon: Zap,
+        title: "Quote Request System",
+        desc: "Dedicated sections for service inquiries, quote requests, and customer communication to boost lead generation.",
+        Icon: FileText,
       },
       {
-        title: "Blog Pages",
-        desc: "Present articles, news, and insights in a readable format.",
-        Icon: Search,
+        title: "Project Showcase",
+        desc: "Highlight completed installations, success stories, and case studies with organized project presentation layouts.",
+        Icon: Briefcase,
       },
       {
-        title: "Professional Layout",
-        desc: "Structured pages designed for clarity and easy navigation.",
-        Icon: Code2,
+        title: "Blog & Insights",
+        desc: "Share industry news, educational content, and company updates through professionally designed blog pages.",
+        Icon: Newspaper,
       },
       {
-        title: "Easy Customization",
-        desc: "Flexible design system built for scalability and branding.",
-        Icon: Smartphone,
+        title: "Fully Customizable",
+        desc: "Built with reusable components and organized design systems for easy branding and future scalability.",
+        Icon: Settings,
       },
     ],
   },
