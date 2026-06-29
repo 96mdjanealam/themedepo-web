@@ -192,7 +192,7 @@ export const privacyPolicyData = {
         "Request a copy of your data where applicable",
         "Withdraw consent where processing is based on consent",
       ],
-      contact: "info@eleganceit.co",
+      contact: "contact@themedepo.com",
     },
 
     {
@@ -229,7 +229,7 @@ export const privacyPolicyData = {
         },
       ],
 
-      email: "info@eleganceit.co",
+      email: "contact@themedepo.com",
 
       phone: "+880 1781-885191",
 

@@ -84,7 +84,7 @@ const AVATARS = [person1, person2, person3];
 
 const LEGAL_LINKS = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
 ];
 
 // ---------------------------------------------------------------------------

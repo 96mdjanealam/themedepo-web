@@ -5,8 +5,8 @@ import Link from "next/link";
 // ---------------------------------------------------------------------------
 
 const STATS = [
-  { value: "12+", label1: "Years Of", label2: " Experience", primary: true },
-  { value: "400+", label1: "Amazing", label2: "Products", primary: false },
+  { value: "10+", label1: "Years Of", label2: " Experience", primary: true },
+  { value: "100+", label1: "Amazing", label2: "Products", primary: false },
   { value: "15+", label1: "Team", label2: "Members", primary: true },
 ];
 
@@ -37,7 +37,7 @@ const EmpoweringCreators = () => {
             support — so you focus on growth, we handle the rest.
           </p>
           <Link
-            href="/about"
+            href="/about-us"
             className="px-8 py-3.5 bg-primary hover:bg-primary/90 text-white text-sm font-semibold rounded-full transition-colors duration-200"
           >
             About our Company

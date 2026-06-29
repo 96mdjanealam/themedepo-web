@@ -48,8 +48,7 @@ const OurStory = ({ currentPath }: { currentPath?: string }) => {
         ))}
       </div>
       <p className="text-sm text-white/70 leading-relaxed">
-        Recognized as a top-tier premium theme author across leading global
-        marketplaces.
+        Creating modern website templates trusted by customers across multiple marketplaces.
       </p>
     </div>
   );

@@ -154,13 +154,13 @@ const EverythingNeedToKnow = () => (
                 className="text-white/60"
                 strokeWidth={1.5}
               />
-              <Link
-                href="/services/digital-marketing"
+              {/* <Link
+                href="#"
                 className={`${iconBox} bg-white text-foreground hover:bg-primary hover:text-white transition-colors duration-200`}
                 aria-label="View Digital Marketing service"
               >
                 <ArrowRight size={16} />
-              </Link>
+              </Link> */}
             </div>
             <div>
               <h3 className="font-syne font-bold text-2xl text-white mb-2">
